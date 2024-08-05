@@ -24,7 +24,7 @@ ASSUSERNAME = getenv("ASSUSERNAME" , "@Naruto_X_Hinata")
 # ---------------------------------------------------------
 UPSTREAM_REPO = getenv(
     "UPSTREAM_REPO",
-    "https://github.com/ishu9805/DAXXMUSIC",
+    "https://github.com/ishu9805/tanjiromusic",
 )
 UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "Master")
 GIT_TOKEN = getenv(
@@ -35,7 +35,7 @@ SERVER_PLAYLIST_LIMIT = int(getenv("SERVER_PLAYLIST_LIMIT", "3000"))
 
 #---------------------------------------------------------------
 #---------------------------------------------------------------
-MONGO_DB_URI = getenv("MONGO_DB_URI", None)
+MONGO_DB_URI = getenv("MONGO_DB_URI", "mongodb+srv://babusona:hinatababy@cluster0.t0lfelh.mongodb.net/")
 #---------------------------------------------------------------
 #---------------------------------------------------------------
 
