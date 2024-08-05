@@ -9,22 +9,22 @@ from pyrogram import filters
 load_dotenv()
 # ------------------------------------
 # -----------------------------------------------------
-API_ID = int(getenv("API_ID"))
-API_HASH = getenv("API_HASH")
+API_ID = int(getenv("API_ID", "26692918"))
+API_HASH = getenv("API_HASH", "2b239375e141e882a33b59820ce827be")
 # ------------------------------------------------------
-BOT_TOKEN = getenv("BOT_TOKEN")
+BOT_TOKEN = getenv("BOT_TOKEN",)
 # -------------------------------------------------------
-OWNER_USERNAME = getenv("OWNER_USERNAME","@Tanjiro1249")
+OWNER_USERNAME = getenv("OWNER_USERNAME","@alone_x_moder")
 # --------------------------------------------------------
 BOT_USERNAME = getenv("BOT_USERNAME" , "Hinata_X_Music_robot")
 # --------------------------------------------------------
 BOT_NAME = getenv("BOT_NAME" , "HINATA")
 # ---------------------------------------------------------
-ASSUSERNAME = getenv("ASSUSERNAME" , "@Hinata_assistant")
+ASSUSERNAME = getenv("ASSUSERNAME" , "@Naruto_X_Hinata")
 # ---------------------------------------------------------
 UPSTREAM_REPO = getenv(
     "UPSTREAM_REPO",
-    "https://github.com/vikas-851/DAXXMUSIC",
+    "https://github.com/ishu9805/DAXXMUSIC",
 )
 UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "Master")
 GIT_TOKEN = getenv(
@@ -44,10 +44,10 @@ DURATION_LIMIT_MIN = int(getenv("DURATION_LIMIT", 17000))
 # ----------------------------------------------------------------
 
 # ----------------------------------------------------------------
-LOGGER_ID = int(getenv("LOGGER_ID", -1001919135283))
+LOGGER_ID = int(getenv("LOGGER_ID", "-1002048925723"))
 # ----------------------------------------------------------------
 # ----------------------------------------------------------------
-OWNER_ID = int(getenv("OWNER_ID", 6664582540))
+OWNER_ID = int(getenv("OWNER_ID", "7378476666"))
 # -----------------------------------------------------------------
 # -----------------------------------------------------------------
 
