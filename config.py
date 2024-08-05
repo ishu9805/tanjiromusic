@@ -9,10 +9,10 @@ from pyrogram import filters
 load_dotenv()
 # ------------------------------------
 # -----------------------------------------------------
-API_ID = getenv("API_ID" , "26692918")
-API_HASH = getenv("API_HASH" , "2b239375e141e882a33b59820ce827be")
+API_ID = 26692918
+API_HASH = "2b239375e141e882a33b59820ce827be"
 # ------------------------------------------------------
-BOT_TOKEN = getenv("BOT_TOKEN" , "6789724300:AAHSr7kZqNY1oUNKxTuAaJvC4Ogqz603pzA")
+BOT_TOKEN = "6789724300:AAHSr7kZqNY1oUNKxTuAaJvC4Ogqz603pzA"
 # -------------------------------------------------------
 OWNER_USERNAME = getenv("OWNER_USERNAME","@alone_x_moder")
 # --------------------------------------------------------
@@ -35,7 +35,7 @@ SERVER_PLAYLIST_LIMIT = getenv("SERVER_PLAYLIST_LIMIT", "3000")
 
 #---------------------------------------------------------------
 #---------------------------------------------------------------
-MONGO_DB_URI = getenv("MONGO_DB_URI", "mongodb+srv://babusona:hinatababy@cluster0.t0lfelh.mongodb.net/")
+MONGO_DB_URI = "mongodb+srv://babusona:hinatababy@cluster0.t0lfelh.mongodb.net/"
 #---------------------------------------------------------------
 #---------------------------------------------------------------
 
