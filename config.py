@@ -14,13 +14,13 @@ API_HASH = "2b239375e141e882a33b59820ce827be"
 # ------------------------------------------------------
 BOT_TOKEN = "6789724300:AAHSr7kZqNY1oUNKxTuAaJvC4Ogqz603pzA"
 # -------------------------------------------------------
-OWNER_USERNAME = getenv("OWNER_USERNAME","@alone_x_moder")
+OWNER_USERNAME = "alone_x_moder"
 # --------------------------------------------------------
-BOT_USERNAME = getenv("BOT_USERNAME" , "Hinata_X_Music_robot")
+BOT_USERNAME = "Hinata_X_Music_robot")
 # --------------------------------------------------------
-BOT_NAME = getenv("BOT_NAME" , "HINATA")
+BOT_NAME = "HINATA"
 # ---------------------------------------------------------
-ASSUSERNAME = getenv("ASSUSERNAME" , "@Naruto_X_Hinata")
+ASSUSERNAME = "Naruto_X_Hinata"
 # ---------------------------------------------------------
 UPSTREAM_REPO = getenv(
     "UPSTREAM_REPO",
@@ -47,7 +47,7 @@ DURATION_LIMIT_MIN = getenv("DURATION_LIMIT", 17000)
 LOGGER_ID = -1002048925723
 # ----------------------------------------------------------------
 # ----------------------------------------------------------------
-OWNER_ID = getenv("OWNER_ID", "7378476666")
+OWNER_ID = "7378476666"
 # -----------------------------------------------------------------
 # -----------------------------------------------------------------
 
@@ -70,8 +70,8 @@ HEROKU_API_KEY = getenv("HEROKU_API_KEY")
 
 # ------------------------------------------------------------------------
 # -------------------------------------------------------------------------
-SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/blade_x_community")
-SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/blade_x_support")
+SUPPORT_CHANNEL = "https://t.me/blade_x_community"
+SUPPORT_CHAT = "https://t.me/blade_x_support"
 # ------------------------------------------------------------------------------
 # -------------------------------------------------------------------------------
 
