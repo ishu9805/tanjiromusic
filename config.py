@@ -16,7 +16,7 @@ BOT_TOKEN = "6789724300:AAHSr7kZqNY1oUNKxTuAaJvC4Ogqz603pzA"
 # -------------------------------------------------------
 OWNER_USERNAME = "alone_x_moder"
 # --------------------------------------------------------
-BOT_USERNAME = "Hinata_X_Music_robot")
+BOT_USERNAME = "Hinata_X_Music_robot"
 # --------------------------------------------------------
 BOT_NAME = "HINATA"
 # ---------------------------------------------------------
