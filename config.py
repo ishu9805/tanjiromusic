@@ -31,7 +31,7 @@ GIT_TOKEN = getenv(
     "GIT_TOKEN", None
 ) 
 # Maximum Limit Allowed for users to save playlists on bot's server
-SERVER_PLAYLIST_LIMIT = int(getenv("SERVER_PLAYLIST_LIMIT", "3000"))
+SERVER_PLAYLIST_LIMIT = getenv("SERVER_PLAYLIST_LIMIT", "3000")
 
 #---------------------------------------------------------------
 #---------------------------------------------------------------
@@ -40,14 +40,14 @@ MONGO_DB_URI = getenv("MONGO_DB_URI", "mongodb+srv://babusona:hinatababy@cluster
 #---------------------------------------------------------------
 
 # ----------------------------------------------------------------
-DURATION_LIMIT_MIN = int(getenv("DURATION_LIMIT", 17000))
+DURATION_LIMIT_MIN = getenv("DURATION_LIMIT", 17000)
 # ----------------------------------------------------------------
 
 # ----------------------------------------------------------------
-LOGGER_ID = int(getenv("LOGGER_ID", -1002048925723))
+LOGGER_ID = getenv("LOGGER_ID", "-1002048925723")
 # ----------------------------------------------------------------
 # ----------------------------------------------------------------
-OWNER_ID = int(getenv("OWNER_ID", 7378476666))
+OWNER_ID = getenv("OWNER_ID", "7378476666")
 # -----------------------------------------------------------------
 # -----------------------------------------------------------------
 
@@ -86,9 +86,9 @@ SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/blade_x_support")
 # --------------------------------------------------------------------------------
 # --------------------------------------------------------------------------------
 AUTO_LEAVING_ASSISTANT = getenv("AUTO_LEAVING_ASSISTANT", "True")
-AUTO_LEAVE_ASSISTANT_TIME = int(getenv("ASSISTANT_LEAVE_TIME", 60))
-SONG_DOWNLOAD_DURATION = int(getenv("SONG_DOWNLOAD_DURATION", 9999999))
-SONG_DOWNLOAD_DURATION_LIMIT = int(getenv("SONG_DOWNLOAD_DURATION_LIMIT", 9999999))
+AUTO_LEAVE_ASSISTANT_TIME = int(getenv("ASSISTANT_LEAVE_TIME", "60"))
+SONG_DOWNLOAD_DURATION = int(getenv("SONG_DOWNLOAD_DURATION", "9999999"))
+SONG_DOWNLOAD_DURATION_LIMIT = int(getenv("SONG_DOWNLOAD_DURATION_LIMIT", "9999999"))
 # --------------------------------------------------------------------------------
 # --------------------------------------------------------------------------------
 # --------------------------------------------------------------------------------
