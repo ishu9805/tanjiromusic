@@ -388,7 +388,7 @@ async def play_commnd(
         if "-v" in query:
             query = query.replace("-v", "")
         try:
-            details, track_id = await YouTube.track(query)
+            details, track_id = await Spotify.track(query)
         except:
             return await mystic.edit_text(_["play_3"])
         streamtype = "youtube"
