@@ -12,7 +12,7 @@ load_dotenv()
 API_ID = 26692918
 API_HASH = "2b239375e141e882a33b59820ce827be"
 # ------------------------------------------------------
-BOT_TOKEN = "6789724300:AAHSr7kZqNY1oUNKxTuAaJvC4Ogqz603pzA"
+BOT_TOKEN = "6789724300:AAHWTREMKE-Y-52iVx-9YsMMgutQpS9kyoU"
 # -------------------------------------------------------
 OWNER_USERNAME = "alone_x_moder"
 # --------------------------------------------------------
