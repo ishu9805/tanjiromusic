@@ -1,4 +1,3 @@
-
 import asyncio
 import os
 import re
@@ -29,7 +28,7 @@ async def shell_cmd(cmd):
 
 
 class YouTubeAPI:
-    def init(self):
+    def __init__(self):
         self.base = "https://www.youtube.com/watch?v="
         self.regex = r"(?:youtube\.com|youtu\.be)"
         self.status = "https://www.youtube.com/oembed?url="
@@ -106,14 +105,14 @@ class YouTubeAPI:
             "Referer": "https://www.youtube.com/"
         }
 
-   proc =   await asyncio.create_subprocess_exec(
+        proc = await asyncio.create_subprocess_exec(
             "yt-dlp",
             "-g",
             "-f",
             "best[height<=?720][width<=?1280]",
             link,
-            stdout=asyncio.subprocess.PIPE,
-            stderr=asyncio.subprocess.PIPE,
+            stdout=async.subprocess.PIPE,
+            stderr=async.subprocess.PIPE,
             env=dict(os.environ, **headers)
         )
         stdout, stderr = await proc.communicate()
@@ -202,30 +201,6 @@ class YouTubeAPI:
                 "geo_bypass": True,
                 "nocheckcertificate": True,
                 "quiet": True,
-                "no_warnings":
-
-async def download(
-        self,
-        link: str,
-        mystic,
-        video: Union[bool, str] = None,
-        videoid: Union[bool, str] = None,
-        songaudio: Union[bool, str] = None,
-        songvideo: Union[bool, str] = None,
-        format_id: Union[bool, str] = None,
-        title: Union[bool, str] = None,
-    ) -> str:
-        if videoid:
-            link = self.base + link
-        loop = asyncio.get_running_loop()
-
-        def audio_dl():
-            ydl_opts = {
-                "format": "bestaudio/best",
-                "outtmpl": "downloads/%(id)s.%(ext)s",
-                "geo_bypass": True,
-                "nocheckcertificate": True,
-                "quiet": True,
                 "no_warnings": True,
                 "prefer_ffmpeg": True,
                 "postprocessors": [
@@ -252,6 +227,12 @@ async def download(
                 "quiet": True,
                 "no_warnings": True,
                 "prefer_ffmpeg": True,
+                "merge_output_format": "mp4",
+                "postprocessors": [
+                    {
+                        "key": "FFmpegMetadata",
+                    }
+                ],
             }
             with yt_dlp.YoutubeDL(ydl_opts) as x:
                 info = x.extract_info(link, download=False)
@@ -260,63 +241,28 @@ async def download(
                     x.download([link])
                 return path
 
-        def song_video_dl():
+        def song_v_dl():
             ydl_opts = {
-                "format": f"{format_id}+140",
-                "outtmpl": f"downloads/{title}",
+                "format_id": format_id,
+                "outtmpl": "downloads/%(id)s.%(ext)s",
                 "geo_bypass": True,
                 "nocheckcertificate": True,
                 "quiet": True,
                 "no_warnings": True,
                 "prefer_ffmpeg": True,
-                "merge_output_format": "mp4",
             }
             with yt_dlp.YoutubeDL(ydl_opts) as x:
-                x.download([link])
-            return f"downloads/{title}.mp4"
+                info = x.extract_info(link, download=False)
+                path = os.path.join("downloads", f"{info['id']}.{info['ext']}")
+                if not os.path.exists(path):
+                    x.download([link])
+                return path
 
-        def song_audio_dl():
-            ydl_opts = {
-                "format": format_id,
-                "outtmpl": f"downloads/{title}.%(ext)s",
-                "geo_bypass": True,
-                "nocheckcertificate": True,
-                "quiet": True,
-                "no_warnings": True,
-                "prefer_ffmpeg": True,
-                "postprocessors": [
-                    {
-                        "key": "FFmpegExtractAudio",
-                        "preferredcodec": "mp3",
-                        "preferredquality": "192",
-                    }
-                ],
-            }
-            with yt_dlp.YoutubeDL(ydl_opts) as x:
-                x.download([link])
-            return f"downloads/{title}.mp3"
-
-        if songvideo:
-            return await loop.run_in_executor(None, song_video_dl)
-        elif songaudio:
-            return await loop.run_in_executor(None, song_audio_dl)
-        elif video:
-            if await is_on_off(1):
-                return await loop.run_in_executor(None, video_dl)
-            else:
-                proc = await asyncio.create_subprocess_exec(
-                    "yt-dlp",
-                    "-g",
-                    "-f",
-                    "best[height<=?720][width<=?1280]",
-                    link,
-                    stdout=asyncio.subprocess.PIPE,
-                    stderr=asyncio.subprocess.PIPE,
-                )
-                stdout, stderr = await proc.communicate()
-                if stdout:
-                    return stdout.decode().split("\n")[0]
-                else:
-                    return None
+        if songaudio:
+            file_path = await loop.run_in_executor(None, audio_dl)
+        elif songvideo:
+            file_path = await loop.run_in_executor(None, song_v_dl)
         else:
-            return await loop.run_in_executor(None, audio_dl)
+            file_path = await loop.run_in_executor(None, video_dl)
+
+        return file_path
