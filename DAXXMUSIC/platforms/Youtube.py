@@ -6,7 +6,7 @@ from typing import Union, List
 import yt_dlp
 from pyrogram.enums import MessageEntityType
 from pyrogram.types import Message
-from youtubesearchpython.future import VideosSearch
+from youtubesearchpython.__future__ import VideosSearch
 
 from ComboBot.utils.database import is_on_off
 from ComboBot.utils.formatters import time_to_seconds
