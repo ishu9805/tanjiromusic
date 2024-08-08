@@ -111,8 +111,8 @@ class YouTubeAPI:
             "-f",
             "best[height<=?720][width<=?1280]",
             link,
-            stdout=async.subprocess.PIPE,
-            stderr=async.subprocess.PIPE,
+            stdout=asyncio.subprocess.PIPE,
+            stderr=asyncio.subprocess.PIPE,
             env=dict(os.environ, **headers)
         )
         stdout, stderr = await proc.communicate()
