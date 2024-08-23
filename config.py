@@ -12,11 +12,11 @@ load_dotenv()
 API_ID = 26692918
 API_HASH = "2b239375e141e882a33b59820ce827be"
 # ------------------------------------------------------
-BOT_TOKEN = "6789724300:AAHWTREMKE-Y-52iVx-9YsMMgutQpS9kyoU"
+BOT_TOKEN = "6830252572:AAH5ar0a4vBM7MMDL_dVLaeJWTuTjyC8Be4"
 # -------------------------------------------------------
 OWNER_USERNAME = "alone_x_moder"
 # --------------------------------------------------------
-BOT_USERNAME = "Hinata_X_Music_robot"
+BOT_USERNAME = "himenoxmusic_bot"
 # --------------------------------------------------------
 BOT_NAME = "HINATA"
 # ---------------------------------------------------------
@@ -44,7 +44,7 @@ DURATION_LIMIT_MIN = getenv("DURATION_LIMIT", 16000)
 # ----------------------------------------------------------------
 
 # ----------------------------------------------------------------
-LOGGER_ID = -1001975521991
+LOGGER_ID = -1002245485840
 # ----------------------------------------------------------------
 # ----------------------------------------------------------------
 OWNER_ID = 7378476666
@@ -117,7 +117,7 @@ TG_VIDEO_FILESIZE_LIMIT = int(getenv("TG_VIDEO_FILESIZE_LIMIT", 1073741824))
 # ------------------------------------
 # ------------------------------------
 # ------------------------------------
-STRING1 = "BQGtHS0Aqef1ZiRD-DCnf_L3LU-Jzju0IaYfixtuqjOLWMNe2wJZOa4HV2HKHcQjJrQ6JBe0FYZtbGG5S7EQ5oCVwcF5OhFtgn8axRg3vR-XnfmC5c9AR7SFohUQotl3hY4LV9hFQY4b3Zfq8XGNQ8Mx3jv8uzxyNYLQlCi6yT7WzjKlAhZ0XqbqmA63eMsHbTBTplzF7miaO-5s1LKmnZ7pqRqBdnzUuvbuQW2dHObHM7onYcqvi_GzzL_1vbIt4Ty4tbjG1itg0vSkit5Y5xtQTpTPYkJsd2jXEZyzfuJXWnK0HUCF5swZpoAonCvcqDRYZuIBHFI7X6bIaZuzxLH9ov8GhgAAAAGtITP-AA"
+STRING1 = getenv("STRING_SESSION")
 STRING2 = getenv("STRING_SESSION2", None)
 STRING3 = getenv("STRING_SESSION3", None)
 STRING4 = getenv("STRING_SESSION4", None)
